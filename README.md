@@ -1,7 +1,7 @@
 # Database-Final-Project
 
 使用方式：
-1. 下載檔案
+1. 建立一個資料夾(這邊舉例FinalProject)，把檔案下載進那個資料夾。(不這樣做也可以，只是方便解釋)
 2. 到FinalProject資料夾中，值行env\Scripts\activate啟動虛擬環境
 3. 到ReactDjango裡的settings.py，把資料庫名稱和密碼改成你們自己的設定 (83~92行)
 5. 把路徑改到FinalProject下，值行python manage.py runserver
