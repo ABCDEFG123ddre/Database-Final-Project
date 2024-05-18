@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block WebLink %}
+<script type="module" src="http://localhost:5173/src/RAM.jsx"></script>
+{% endblock %}
+
+{% block main %}
+<div>
+    <a href="/">Home</a>
+    <a href="login/">Login</a>
+</div>
+<div id="ram_root"></div>
+{% endblock %}

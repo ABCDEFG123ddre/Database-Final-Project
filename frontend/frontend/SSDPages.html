@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block WebLink %}
+<script type="module" src="http://localhost:5173/src/SSD.jsx"></script>
+{% endblock %}
+
+{% block main %}
+<div>
+    <a href="/">Home</a>
+    <a href="login/">Login</a>
+</div>
+<div id="ssd_root"></div>
+{% endblock %}
