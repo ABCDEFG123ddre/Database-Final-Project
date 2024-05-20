@@ -82,12 +82,12 @@ WSGI_APPLICATION = 'ReactDjango.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': '??',  #資料庫名稱
-        'USER': 'postgres',  #資料庫帳號
-        'PASSWORD': '??',  #資料庫密碼
-        'HOST': 'localhost',  #Server(伺服器)位址
-        'PORT': '5432'  #PostgreSQL Port號
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'FinalProjectDB',  #資料庫名稱
+        'USER': 'team13',  #資料庫帳號
+        'PASSWORD': 'VvCUAh]4FTD!O4D_',  #資料庫密碼
+        'HOST': '140.122.184.129',  #Server(伺服器)位址
+        'PORT': '3310'  #PostgreSQL Port號
     }
 }
 
