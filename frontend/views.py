@@ -96,7 +96,7 @@ def SSDPages(request, *args, **kwargs):
 
 @api_view(('GET','POST'))
 def RAMdata (request, *args, **kwargs):
-    readRAMInfo()
+    #readRAMInfo()
     if request.method == 'GET':
         queryset=RAM.objects.all()
         data = []
@@ -109,7 +109,7 @@ def RAMdata (request, *args, **kwargs):
     
 @api_view(('GET','POST'))
 def HDDdata (request, *args, **kwargs):
-    readHDDInfo()
+    #readHDDInfo()
     if request.method == 'GET':
         queryset=HDD.objects.all()
         data = []
@@ -122,7 +122,7 @@ def HDDdata (request, *args, **kwargs):
     
 @api_view(('GET','POST'))
 def SSDdata (request, *args, **kwargs):
-    readSSDInfo()
+    #readSSDInfo()
     if request.method == 'GET':
         queryset=SSD.objects.all()
         data = []
