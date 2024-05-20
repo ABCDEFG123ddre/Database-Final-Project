@@ -25,7 +25,7 @@ class SSD(models.Model):
     capacity = models.CharField(null=False, default='', max_length=50)
     read_speed = models.IntegerField()
     write_speed = models.IntegerField()
-    warranty = models.CharField()
+    warranty = models.CharField(max_length=100)
 
     def __str__(self):
         return self.product_id
