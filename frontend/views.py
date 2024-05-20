@@ -16,7 +16,10 @@ def readRAMInfo():
     file = open("frontend/ram_info.csv", "r", encoding="utf-8")
     data = list(csv.reader(file, delimiter=","))
     file.close()
-    maxid = Product.objects.latest('product_id').product_id
+    try:
+        maxid = Product.objects.latest('product_id').product_id
+    except:
+        maxid = 0
     idx = 1
     for i in range(1, len(data)):
         isExist = RAM.objects.filter(ram_type = data[i][0], ddr_gen = data[i][2], channel = data[i][3], capacity = data[i][4], clock_rate = data[i][5], remark = data[i][6]).count()
@@ -34,7 +37,10 @@ def readHDDInfo():
     file = open("frontend/hdd_info.csv", "r", encoding="utf-8")
     data = list(csv.reader(file, delimiter=","))
     file.close()
-    maxid = Product.objects.latest('product_id').product_id
+    try:
+        maxid = Product.objects.latest('product_id').product_id
+    except:
+        maxid = 0
     idx = 1
     for i in range(1, len(data)):
         isExist = HDD.objects.filter(hdd_type = data[i][0], series = data[i][2], capacity = data[i][3], memory = data[i][4], model = data[i][5], RPM = data[i][6], warranty = data[i][7]).count()
@@ -52,7 +58,10 @@ def readSSDInfo():
     file = open("frontend/hdd_info.csv", "r", encoding="utf-8")
     data = list(csv.reader(file, delimiter=","))
     file.close()
-    maxid = Product.objects.latest('product_id').product_id
+    try:
+        maxid = Product.objects.latest('product_id').product_id
+    except:
+        maxid = 0
     idx=1
     for i in range(1, len(data)):
         isExist = SSD.objects.filter(ssd_type = data[i][0], capacity = data[i][2], read_speed = data[i][3], write_speed = data[i][4], warranty = data[i][5]).count()
