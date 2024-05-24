@@ -55,3 +55,35 @@ class RAM(models.Model):
     def __str__(self):
         return self.product_id
 
+class Collection(models.Model):
+    collection_id = models.IntegerField('id', default='')
+    collection_name = models.CharField('name', max_length=50, default='')
+    user_id = models.IntegerField('user id', default='')
+    product_id = models.IntegerField('product id', default='')
+
+    def __str__(self):
+        return self.collection_id
+
+class Cart(models.Model):
+    user_id = models.IntegerField('cart id', default='') #uesr id is equl to cart id
+    product_id = models.IntegerField('product id', default='')
+
+    def __str__(self):
+        return self.user_id
+
+class Order(models.Model):
+    order_id = models.IntegerField('id', default='')
+    user_id  = models.IntegerField('user id', default='')
+    amount = models.IntegerField('total price', default=0)
+    date_time = models.DateTimeField('time', default='')
+
+    def __str__(self):
+        return self.order_id
+
+
+class Order_Product(models.Model):
+    order_id = models.IntegerField('id', default='')
+    product_id = models.IntegerField('product id', default='')
+
+    def __str__(self):
+        return self.order_id
