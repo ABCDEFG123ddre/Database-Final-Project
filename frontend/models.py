@@ -76,6 +76,7 @@ class Order(models.Model):
     user_id  = models.IntegerField('user id', default='')
     amount = models.IntegerField('total price', default=0)
     date_time = models.DateTimeField('time', default=timezone.now)
+    submitted = models.BooleanField('if the order has been submitted', default=False)
 
     def __str__(self):
         return self.order_id
