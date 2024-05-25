@@ -15,6 +15,7 @@ class Product(models.Model):
     price = models.IntegerField('price', null=False, default='')
     brand = models.CharField('brand', max_length=30, null=False, default='')
     original_info = models.CharField(max_length=200)
+    left = models.IntegerField('left', default=1000) #number of product left
 
     def __str__(self):
         return self.product_id
