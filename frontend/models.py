@@ -16,6 +16,7 @@ class Product(models.Model):
     brand = models.CharField('brand', max_length=30, null=False, default='')
     original_info = models.CharField(max_length=200)
     left = models.IntegerField('left', default=1000) #number of product left
+    product_type = models.CharField('type', max_length=10, default='') #SSD or RAM or HDD
 
     def __str__(self):
         return self.product_id
